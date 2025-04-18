@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.app.gentimedia",
+      "sha256_cert_fingerprints": [
+        "76:76:F8:D9:65:84:86:D9:B2:7F:D8:22:30:DF:25:4F:BF:F8:6C:DA:58:F3:21:45:19:3C:CD:58:A5:4F:6B:98",
+        "42:2A:5B:40:BF:DE:0F:EF:4A:61:20:31:83:82:BB:5B:DF:BF:72:3B:0F:CE:EB:B3:D9:75:8A:EB:CE:E3:A5:43",
+        "7A:F8:E6:75:F9:92:B9:60:23:40:A6:48:D1:02:71:A6:7E:CE:CE:15:E4:42:C1:00:E2:09:53:21:5B:F5:D3:BD"
+      ]
+    }
+  }
+]

@@ -1,0 +1,151 @@
+.page-title {
+    color: #888;
+    font-family: Graphik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.page-sub__title {
+    color: #FDFDFD;
+}
+
+.profile-details__card {
+    border-radius: 10px;
+    background: #2F2F2F;
+    overflow: hidden;
+}
+
+.profile-details__title {
+    color: #FDFDFD;
+    font-family: Graphik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.profile-details__value {
+    color: #888;
+}
+
+.profile-details__card .card-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFF;
+}
+
+.profile-details__card .subscription__wrapper {
+    background: linear-gradient(50deg, #5F42E2 0%, #9B42C0 100%);
+}
+
+.profile-user__subscription-type {
+    color: #FDFDFD;
+    font-family: Graphik;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.profile-user__subscription-price {
+    color: #FDFDFD;
+    font-family: Graphik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.user-subscription__features_list li {
+    color: #FDFDFD;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Graphik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.profile-subscription__guide {
+    color: #FDFDFD;
+    text-align: center;
+    font-family: Graphik;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%
+}
+
+.guide__action {
+    color: #5F42E2;
+    font-weight: 600;
+    line-height: 150%;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.cancel-subscription_modal {
+    /* background: #888; */
+    background-blend-mode: hard-light;
+    backdrop-filter: blur(10px);
+}
+
+
+.cancel-subscription_modal .modal-content {
+    border-radius: 20px;
+    background: #121212;
+    padding: 37px;
+}
+
+.cancel-subscription__header {
+    color: #FDFDFD;
+    text-align: center;
+    font-family: Graphik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.cancel-subscription__text {
+    color: #C4C4C4;
+    text-align: center;
+    font-family: Graphik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 149.5%
+}
+
+.contact_support {
+    color: #C4C4C4;
+    text-align: center;
+    font-family: Graphik;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 149.5%;
+}
+
+.subscription-plan__btn.get-app-btn.secondary-btn {
+    background: #888 !important;
+
+}
+
+.text-gradient {
+    background: linear-gradient(50deg, #5F42E2 0%, #9B42C0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width:767px) {
+    .user-subscription__features_list.mb-0 {
+        margin: 10px 0 16px 0 !important;
+    }
+
+    .user-subscription__features_list li {
+        margin-left: 0 !important;
+    }
+}

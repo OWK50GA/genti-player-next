@@ -1,0 +1,26 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "D8RBYP2R42.com.app.gentimedia"
+        ],
+        "components": [
+          {
+            "/": "/",
+            "comment": "Matches any URL whose path is exactly /"
+          },
+          {
+            "/": "/title/*",
+            "comment": "Matches any URL whose path starts with /title/ and has a query parameter named episode"
+          },
+          {
+            "/": "/podcast/*",
+            "comment": "Matches any URL whose path starts with /podcast/ and has a query parameter named episode"
+          }
+        ]
+      }
+    ]
+  }
+}

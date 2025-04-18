@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  padding: 0;
+}
+
+.container span {
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.cardCarousel {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.carouselDefault {
+  width: 100%;
+  height: 228px;
+  /* margin: 20px; */
+
+}
+
+.leftButton {
+  color: #9B42C0;
+  font-size: 2em;
+  padding: 5px;
+}
+
+.rightButton {
+  color: #9B42C0;
+  font-size: 2em;
+  padding: 5px;
+}
+
+
+.cardSummary {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+  grid-gap: 0px;
+}
+
+.cardSummary div {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+  /* opacity: 0; 
+  position: absolute;
+  transform: scale(1) translateX(40px); */
+}
+
+
+.cardSummary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+
+
+.card {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  transform: scale(1) translateX(40px);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.card.active {
+  opacity: 1;
+  transform: scale(1) translateY(0) translateX(-40px);
+  z-index: 3;
+  width: 80%;
+}
+
+.card.next {
+  opacity: 0.9;
+  z-index: 2;
+  transform: scale(0.9) translateX(-40px);
+}
+
+.card.prev {
+  transform: scale(0.8) translateX(17%);
+  z-index: 1;
+  opacity: 0.6;
+  width: calc(100%);
+}
+
+.card.inactive {
+  transform: scale(1) translateX(0px);
+  z-index: 1;
+  opacity: 0;
+}
+
+.card.noTranslate {
+  transform: scale(1) translateX(0px);
+  z-index: 1;
+  opacity: 0;
+}
+
+@media (max-width:767px) {
+
+  .card.next {
+    opacity: 0.6;
+    z-index: 2;
+    transform: scale(0.9) translateX(40px);
+    display: none;
+  }
+
+  .card.prev {
+    transform: scale(0.9) translateX(-40px);
+    z-index: 1;
+    display: none;
+    opacity: 0.6;
+  }
+
+  .card.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    z-index: 3;
+    width: 100%;
+  }
+
+  .carouselDefault {
+    width: 100%;
+    height: 137px;
+    /* margin: 20px; */
+
+  }
+
+  .leftButton,
+  .rightButton {
+    display: none;
+  }
+}

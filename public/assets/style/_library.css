@@ -1,0 +1,37 @@
+.library-page {
+    min-height: 100vh;
+    background-color: #121212;
+
+}
+
+.search-control__wrapper {
+    background-color: #121212;
+    z-index: 9999;
+    width: 100%;
+    padding: 0 22px 0 22px;
+    top: 0;
+
+}
+
+.cancel-search__text {
+    margin-left: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.empty-search-text {
+    font-weight: 500;
+    font-size: 18px;
+    color: #FDFDFD;
+}
+
+.empty-search__result_wrapper {
+    height: 80vh;
+}
+
+.search-result__wrapper {
+    padding: 22px;
+    margin-top: 40px;
+
+}

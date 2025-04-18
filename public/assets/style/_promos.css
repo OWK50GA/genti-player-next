@@ -1,0 +1,140 @@
+.promos-banner_section {
+    height: 280px;
+    flex-shrink: 0;
+    background-image: url('../img/promoBg.svg'), linear-gradient(50deg, #5F42E2 0%, #9B42C0 100%);
+    background-repeat: no-repeat;
+    background-position: left bottom, center;
+}
+
+.promos-banner__section-text {
+    color: #FDFDFD;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    width: 42%;
+}
+
+.promos-banner-sub-text {
+    color: #C4C4C4;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-align: center;
+    width: 100%;
+    bottom: 0px;
+}
+
+.promo-section_content {
+    padding: 45px 0;
+}
+
+.promo-guide_text {
+    color: #FDFDFD;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.promo-guide_sub-text {
+    color: #D9D9D9;
+    font-family: Graphik;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.promo-input__label {
+    color: #FDFDFD;
+    font-family: Graphik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 12px;
+
+}
+
+.promo-input {
+    border-radius: 30px;
+    border: 1px solid #8E8E8E;
+    background: transparent;
+    margin-bottom: 42px;
+    color: #fff;
+
+}
+
+.no-promo__code-text {
+    color: #FDFDFD;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.no-promo__code-redirect_text {
+    color: #5F42E2;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.promo-feedback_modal .modal-content {
+    border-radius: 20px;
+    background: #121212;
+    padding: 24px;
+}
+
+@media (max-width:767px) {
+    .promos-banner_section {
+        margin-top: 80px;
+        background-size: 35%, 100%;
+    }
+
+    .promos-banner__section-text {
+        color: #FDFDFD;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        width: 90%;
+        margin: auto;
+        padding-top: 90px;
+    }
+
+    .promos-banner-sub-text {
+        font-size: 10px;
+
+    }
+
+    .promo-section_content {
+        padding: 45px 24px;
+    }
+
+    .promo-guide_text {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .promo-guide_sub-text {
+        text-align: center;
+        font-size: 16px;
+    }
+
+
+    .cancel-subscription__text.w-75 {
+        width: 100% !important;
+    }
+
+    .promo-cta_btn {
+        width: 80%;
+        padding: 12px 29px !important
+    }
+
+    .no-promo__code-text,
+    .no-promo__code-redirect_text {
+        font-size: 14px;
+    }
+}
