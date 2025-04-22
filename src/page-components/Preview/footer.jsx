@@ -3,7 +3,7 @@ import { BsInstagram } from 'react-icons/bs'
 
 export default function PreviewFooter({ handleAppRedirect }){
     return (
-        <footer className="preview-footer bg-[#0F0F0F] text-white w-full">
+        <footer className="preview-footer bg-[#0F0F0F] text-white w-full md:block hidden">
             <div className="footer-content max-w-[80rem] mx-auto px-[20px] pt-[60px] pb-0">
                 <div className="footer-main grid grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-8 pb-10 border-b border-[#2B2B2B]">
                     <div className="footer-brand max-w-[400px]">
