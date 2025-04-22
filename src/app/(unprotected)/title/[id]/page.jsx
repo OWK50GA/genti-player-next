@@ -2,6 +2,9 @@ import { unauthorizedAxios } from "@/client/axios";
 import ENDPOINTS from "@/client/endpoints";
 import PreviewComponent from "@/page-components/Preview/PreviewComponent";
 
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+
 export async function generateMetadata({ params }, parent){
     const { id } = await params;
 
