@@ -137,14 +137,14 @@ export default function PreviewComponent({ data }) {
                 </button>
             </div>
             <div
-                className="preview-top-section flex items-center justify-between px-[20px] py-[60px] my-16 mx-auto max-w-[80rem] gap-8"
+                className="preview-top-section flex flex-col-reverse md:flex-row items-center justify-between px-[20px] py-[60px] my-16 mx-auto max-w-[80rem] gap-8"
             >
                 <div style={{
                         // display: 'flex', flexDirection: 'column', gap: '1.2rem'
                     }}
                     className="preview-top-section-left flex flex-col gap-[1.2rem]"
                 >
-                    <h2 className="dream-count-text text-transparent bg-gradient-to-r from-[#8F78F4] to-[#8842CA] bg-clip-text font-[900] text-[65px]">
+                    <h2 className="dream-count-text text-transparent bg-gradient-to-r from-[#8F78F4] to-[#8842CA] bg-clip-text font-[900] text-[30px] md:text-[65px]">
                         {data?.title}
                     </h2>
                     <div style={{ color: '#919191', fontSize: '20px', fontWeight: '500', fontFamily: 'Graphik' }}>
@@ -197,8 +197,8 @@ export default function PreviewComponent({ data }) {
 
         {/* Mid Section */}
         <div style={{backgroundColor: '#FFFFFF'}}>
-            <div className="preview-mid-section-1 flex justify-between items-center px-[20px] py-[100px] max-w-[80rem] mx-auto gap-2">
-                <div className="preview-mid-section-1-left w-3/5">
+            <div className="preview-mid-section-1 flex flex-col md:flex-row justify-between items-center px-[20px] py-6 md:py-[100px] max-w-[80rem] mx-auto gap-12 md:gap-2">
+                <div className="preview-mid-section-1-left md:w-3/5">
                     <h2 className="text-[30px] font-[600] mb-4 text-[#353535]">About this title</h2>
                     <p className="text-[15.5px] font-normal text-[#353535]">
                         {data?.description}
@@ -217,7 +217,7 @@ export default function PreviewComponent({ data }) {
             </div>
 
             <section className="preview-mid-section-2 px-[20px] py-[60px] max-w-[80rem] mx-auto">
-                <div className="preview-mid-section-2-header flex justify-between items-center mb-8">
+                <div className="preview-mid-section-2-header flex flex-col md:flex-row justify-between md:items-center mb-8">
                     <p style={{fontFamily: 'Graphik', fontSize: '25px', fontWeight: '600', color: '#353535'}}>
                         People who viewed this also viewed
                     </p>
@@ -259,7 +259,7 @@ export default function PreviewComponent({ data }) {
                 </div>
             </section>
 
-            <section className="preview-mid-section-3 px-[20px] pb-[60px] pt-0 flex justify-center items-center gap-12 max-w-[80rem] mx-auto">
+            <section className="preview-mid-section-3 px-[20px] pb-[60px] pt-0 flex flex-col justify-center items-center gap-12 max-w-[80rem] mx-auto">
                 <div className="gadget-img my-[10px]">
                     {/* <img src={gadgetsImg} alt="" /> */}
                     <Image src={'/assets/img/gadgets-image.png'} alt="Listen" width={400} height={400} />
