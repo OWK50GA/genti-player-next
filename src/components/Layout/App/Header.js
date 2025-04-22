@@ -5,7 +5,7 @@ import UTM from '@/utils/UTM'
 // import ham from '/assets/img/ham.svg'
 // import logo from '/assets/img/logo2.svg'
 import MobileSidebar from './Sidebar/MobileSidebar'
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import Client from '@/client'
 import useDebounce from '../../Hooks/Debounce'
 import Paywall from '../../Titles/Paywall'
@@ -48,7 +48,9 @@ const Header = () => {
 
 
 
-    useQuery(['user_plans'], () => Client.subscription.user_plans(), {
+    useQuery({
+        queryKey: ['user_plans'], 
+        queryFn: () => Client.subscription.user_plans(), 
         enabled: is_authorized,
         onSuccess: (data) => {
             setUserCurrentPlan(data.data.active_subscription)
@@ -56,12 +58,11 @@ const Header = () => {
         }
     })
 
-    useQuery(
-        ['search-result', { debouncedSearchValue }],
-        () => Client.home.search_titles({
-            query: debouncedSearchValue
-        }),
-        {
+    useQuery({
+            queryKey: ['search-result', { debouncedSearchValue }],
+            queryFn: () => Client.home.search_titles({
+                query: debouncedSearchValue
+            }),
             enabled: debouncedSearchValue.length > 0,
             onSuccess: (data) => {
                 setSearchResult(data.result)

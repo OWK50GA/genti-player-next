@@ -1,4 +1,4 @@
-import Login from "@/pages/Auth/PasswordReset";
+import Login from "@/page-components/Auth/PasswordReset";
 
 export default function ResetPassword(){
     return (

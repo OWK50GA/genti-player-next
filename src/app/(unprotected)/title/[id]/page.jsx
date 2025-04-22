@@ -1,7 +1,6 @@
 import { unauthorizedAxios } from "@/client/axios";
 import ENDPOINTS from "@/client/endpoints";
-import { Metadata, ResolvingMetadata } from 'next'
-import PreviewComponent from "@/pages/Preview/PreviewComponent";
+import PreviewComponent from "@/page-components/Preview/PreviewComponent";
 
 export async function generateMetadata({ params }, parent){
     const { id } = await params;

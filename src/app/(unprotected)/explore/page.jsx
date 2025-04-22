@@ -1,4 +1,4 @@
-import Explore from "@/pages/Explore";
+import Explore from "@/page-components/Explore";
 
 export default function ExplorePage(){
     return (

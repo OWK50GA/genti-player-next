@@ -1,4 +1,4 @@
-import OTP from "@/pages/Auth/VerifyResetOTP";
+import OTP from "@/page-components/Auth/VerifyResetOTP";
 
 export default function VerifyOTP(){
     return (

@@ -1,4 +1,4 @@
-import OTP from "@/pages/Auth/OTP";
+import OTP from "@/page-components/Auth/OTP";
 
 export default function OTPPage(){
     return (
