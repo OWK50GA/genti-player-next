@@ -12,25 +12,25 @@ export async function generateMetadata({ params }, parent){
     if (!titleData) return
 
     return {
-        title: `${titleData.title} | Genti Audio` || 'Genti Audio',
-        description: `Listen to ${titleData.title} by ${titleData.author} on Genti Audio. Stream African stories, audio dramas, and podcasts.`,
+        title: `${titleData?.title} | Genti Audio` || 'Genti Audio',
+        description: `Listen to ${titleData?.title} by ${titleData?.author} on Genti Audio. Stream African stories, audio dramas, and podcasts.`,
         openGraph: {
             title: `${titleData.title} | Genti Audio` || 'Genti Audio',
-            description: `Listen to ${titleData.title} by ${titleData.author} on Genti Audio. Stream African stories, audio dramas, and podcasts.`,
+            description: `Listen to ${titleData?.title} by ${titleData?.author} on Genti Audio. Stream African stories, audio dramas, and podcasts.`,
             images: [
                 {
-                    url: titleData.image || '/logo.svg',
+                    url: `${titleData?.image}`,
                     width: 1200,
                     height: 630,
-                    alt: `${titleData.title} | Genti Audio` || 'Genti Audio'
+                    alt: `${titleData?.title} | Genti Audio` || 'Genti Audio'
                 }
             ]
         },
         twitter: {
             card: `summary_large_image`,
             title: `${titleData.title} | Genti Audio` || 'Genti Audio',
-            description: `Listen to ${titleData.title} by ${titleData.author} on Genti Audio. Stream African stories, audio dramas, and podcasts.`,
-            images: [titleData.image]
+            description: `Listen to ${titleData?.title} by ${titleData?.author} on Genti Audio. Stream African stories, audio dramas, and podcasts.`,
+            images: [titleData?.image]
         }
     }
 }
