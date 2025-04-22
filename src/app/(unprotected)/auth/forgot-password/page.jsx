@@ -1,4 +1,4 @@
-import Login from "@/pages/Auth/ForgotPassword";
+import Login from "@/page-components/Auth/ForgotPassword";
 
 export default function ForgotPasswordPage(){
     return (

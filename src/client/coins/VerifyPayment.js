@@ -1,21 +1,20 @@
 import { toast } from 'react-toastify'
-import { useMutation } from 'react-query';
+import { useMutation } from '@tanstack/react-query';
 import Cookies from 'js-cookie';
-import { useNavigate } from 'react-router-dom';
 import { HttpClient as Axios } from '../axios';
 
 const VerifyPaymentManager = () => {
-    const navigate = useNavigate()
-    const { mutate: verifyTransaction, isLoading, isSuccess } = useMutation(async (data) => {
+    const { mutate: verifyTransaction, isLoading, isSuccess } = useMutation({
+        mutationFn: async (data) => {
 
-        const response = await Axios.post('/buy-coins', data);
-        //console.log(response)
-        if (response?.data?.error) {
-            toast.error(response?.data?.error?.message)
-        } else {
-            toast.success(response?.data?.message)
-        }
-    }, {
+            const response = await Axios.post('/buy-coins', data);
+            //console.log(response)
+            if (response?.data?.error) {
+                toast.error(response?.data?.error?.message)
+            } else {
+                toast.success(response?.data?.message)
+            }
+        }, 
         onError: (error) => {
             //console.log(error)
             if (error?.response) return toast.error(error?.response?.data?.data?.message)

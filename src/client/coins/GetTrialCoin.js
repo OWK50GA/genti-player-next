@@ -1,5 +1,5 @@
 import { toast } from 'react-toastify'
-import { useMutation } from 'react-query';
+import { useMutation } from '@tanstack/react-query';
 import Cookies from 'js-cookie';
 import { HttpClient as Axios } from '../axios';
 import { useRouter } from 'next/navigation';
@@ -7,16 +7,17 @@ import { useRouter } from 'next/navigation';
 const GetTrialCoinManager = () => {
     // const navigate = useNavigate()
     const router = useRouter();
-    const { mutate: getTrialCoin, isLoading, isSuccess } = useMutation(async () => {
+    const { mutate: getTrialCoin, isLoading, isSuccess } = useMutation({
+        mutationFn: async () => {
 
-        const response = await Axios.get('/credit-trail-coins');
-        //console.log(response)
-        if (response?.data?.error) {
-            toast.error(response?.data?.error?.message)
-        } else {
-            toast.success(response?.data?.message ?? response?.data?.message)
-        }
-    }, {
+            const response = await Axios.get('/credit-trail-coins');
+            //console.log(response)
+            if (response?.data?.error) {
+                toast.error(response?.data?.error?.message)
+            } else {
+                toast.success(response?.data?.message ?? response?.data?.message)
+            }
+        }, 
         onError: (error) => {
             //console.log(error)
             if (error?.response) return toast.error(error?.response?.data?.data?.message)

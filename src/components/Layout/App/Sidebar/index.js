@@ -41,7 +41,7 @@ const Sidebar = () => {
     } else {
         is_authorized = false
     }
-
+    
 
     return (
         <div className='min-w-[18%] w-[21.5%] h-[100vh] hidden lg:block'>

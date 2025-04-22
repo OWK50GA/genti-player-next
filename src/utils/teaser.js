@@ -2,7 +2,8 @@ const liked_teaser = []
 const played_teaser = []
 
 
-export const setDefaultTeaser = () => {
+export const setDefaultTeaser = async () => {
+    if (typeof window === 'undefined') return
     const likedTeaser = localStorage.getItem('user_liked_teaser')
     const playedTeaser = localStorage.getItem('user_played_teaser')
     if (!likedTeaser) {

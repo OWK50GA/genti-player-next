@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react'
 import truncate from 'truncate'
 // import overlayIcon from '../../../assets/img/overlayIcon.svg'
 import Paywall from '../Paywall'
-import { useQuery } from 'react-query';
-import Client from '../../../client'
 import LoaderBox from './Loader'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
